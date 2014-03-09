@@ -1,0 +1,18 @@
+// core column behavior
+.col{
+  font-size: @default-font-size;
+  display: inline-block;
+  vertical-align: top;
+}
+
+// section (row) wrapper
+.row{
+  font-size: 0; // keep margins between columns 0 width
+}
+
+
+// make a column and have it span N{@span} of M{@total} columns
+.make-col(@span, @total){
+  width: @span/@total*100%;
+  &:extend(.col);
+}
