@@ -1,8 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
 // core column behavior
 .col{
   font-size: @default-font-size;
   display: inline-block;
   vertical-align: top;
+  margin: @gutter-size/2;
+  padding: 0.5rem;
 }
 
 // section (row) wrapper
@@ -13,6 +19,23 @@
 
 // make a column and have it span N{@span} of M{@total} columns
 .make-col(@span, @total){
-  width: @span/@total*100%;
+  width: (@span/@total*100%) - @gutter-size;
   &:extend(.col);
+}
+
+
+.sg-section{
+  &:extend(.row);
+}
+
+.sg-third{
+  .make-col(@number-cols/3, @number-cols);
+}
+
+.sg-two-thirds{
+  .make-col(2*(@number-cols/3), @number-cols);
+}
+
+.sg-fill{
+  .make-col(@number-cols, @number-cols);
 }
