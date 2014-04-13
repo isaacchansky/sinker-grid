@@ -3,7 +3,7 @@ var less = require('gulp-less');
 var path = require('path');
 
 gulp.task('compile-grid', function () {
-  gulp.src('./less/main.less')
+  gulp.src('./less/grid.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
