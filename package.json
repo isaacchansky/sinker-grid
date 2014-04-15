@@ -1,0 +1,26 @@
+{
+  "name": "sinker-grid",
+  "version": "0.0.0",
+  "description": "A css grid that does not use floats.",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isaacchansky/sinker-grid.git"
+  },
+  "keywords": [
+    "css",
+    "grid"
+  ],
+  "author": "Isaac Chansky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaacchansky/sinker-grid/issues"
+  },
+  "homepage": "https://github.com/isaacchansky/sinker-grid",
+  "devDependencies": {
+    "gulp": "^3.5.5",
+    "gulp-less": "^1.2.3"
+  }
+}
