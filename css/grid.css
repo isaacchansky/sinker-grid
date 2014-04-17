@@ -5,7 +5,10 @@
 .sg-fill,
 .sg-third,
 .sg-two-thirds,
-.sg-half {
+.sg-half,
+.sg-third-flush,
+.sg-two-thirds-flush,
+.sg-half-flush {
   font-size: 1.2rem;
   display: inline-block;
   vertical-align: top;
@@ -42,6 +45,9 @@ p {
 .align-left {
   text-align: left;
 }
+.align-center {
+  text-align: center;
+}
 .sg-fill {
   width: 98%;
 }
@@ -53,4 +59,16 @@ p {
 }
 .sg-half {
   width: 48%;
+}
+.sg-third-flush {
+  width: 33.33333333%;
+  margin: 0;
+}
+.sg-two-thirds-flush {
+  width: 66.66666667%;
+  margin: 0;
+}
+.sg-half-flush {
+  width: 50%;
+  margin: 0;
 }

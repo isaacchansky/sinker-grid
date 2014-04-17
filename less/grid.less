@@ -1,7 +1,7 @@
 // variables
 
 // number of columns
-@number-cols: 12;
+@default-number-cols: 12;
 // gutter size in %
 @gutter-size: 2%;
 // verticla margin between sections/rows
@@ -86,33 +86,59 @@ p{
   text-align: left;
 }
 
+.align-center{
+  text-align: center;
+}
+
 //==================================
 //    Grid Mix-ins
 //==================================
 
 // make a column and have it span N (@span) of M (@total) columns
-.sg-make-col(@span, @total){
+.sg-make-col(@span, @total: @default-number-cols){
   width: (@span/@total*100%) - @gutter-size;
   &:extend(.sg-col-base);
+}
+
+.sg-make-col-flush(@span, @total: @default-number-cols){
+  width: (@span/@total*100%);
+  &:extend(.sg-col-base);
+  margin: 0;
 }
 
 .sg-section{
   &:extend(.sg-row-base);
 }
 
-// convenience classes
+//==================================
+//    Convenience Classes
+//==================================
 .sg-fill{
-  .sg-make-col(@number-cols, @number-cols);
+  .sg-make-col(@default-number-cols, @default-number-cols);
 }
 
 .sg-third{
-  .sg-make-col(@number-cols/3, @number-cols);
+  .sg-make-col(@default-number-cols/3, @default-number-cols);
 }
 
 .sg-two-thirds{
-  .sg-make-col(2*(@number-cols/3), @number-cols);
+  .sg-make-col(2*(@default-number-cols/3), @default-number-cols);
 }
 
 .sg-half{
-  .sg-make-col(@number-cols/2, @number-cols);
+  .sg-make-col(@default-number-cols/2, @default-number-cols);
+}
+
+
+
+.sg-third-flush{
+  .sg-make-col-flush(@default-number-cols/3, @default-number-cols);
+}
+
+.sg-two-thirds-flush{
+  .sg-make-col-flush(2*(@default-number-cols/3), @default-number-cols);
+}
+
+.sg-half-flush{
+  .sg-make-col-flush(@default-number-cols/2, @default-number-cols);
 }
