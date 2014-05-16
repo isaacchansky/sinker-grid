@@ -48,6 +48,24 @@ p {
 .align-center {
   text-align: center;
 }
+.align-bottom {
+  vertical-align: bottom;
+}
+.align-top {
+  vertical-align: top;
+}
+.gravity-bottom:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+}
+.gravity-top:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
 .sg-fill {
   width: 98%;
 }

@@ -74,10 +74,13 @@ p{
 //    Alignment Helpers
 //==================================
 
-.align(@direction){
+.horizontal-align(@direction){
   text-align: @direction;
 }
 
+.vertical-align(@direction){
+  vertical-align: @direction;
+}
 .align-right{
   text-align: right;
 }
@@ -94,6 +97,27 @@ p{
   vertical-align: bottom;
 }
 
+.align-top{
+  vertical-align: top;
+}
+
+.gravity-bottom{
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+  }
+}
+
+.gravity-top{
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+}
 //==================================
 //    Grid Mix-ins
 //==================================
